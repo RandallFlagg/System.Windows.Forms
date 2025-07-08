@@ -26,7 +26,7 @@
 
 // NOT COMPLETE
 
-using Accessibility;
+// using Accessibility;
 using System.Drawing;
 using System.Globalization;
 using System.Reflection;
@@ -34,7 +34,7 @@ using System.Runtime.InteropServices;
 
 namespace System.Windows.Forms {
 	[ComVisible(true)]
-	public class AccessibleObject : StandardOleMarshalObject, IReflect, IAccessible {
+	public class AccessibleObject : StandardOleMarshalObject, IReflect {//, IAccessible {
 		#region Private Variables
 		internal string		name;
 		internal string		value;
@@ -464,97 +464,97 @@ namespace System.Windows.Forms {
 		#endregion	// IReflection Methods and Properties
 
 		#region IAccessible Methods and Properties
-		void IAccessible.accDoDefaultAction(object childID) {
-			throw new NotImplementedException();
-		}
-
-		int IAccessible.accChildCount {
-			get {
-				throw new NotImplementedException();
-			}
-		}
-
-		object IAccessible.accFocus {
-			get {
-				throw new NotImplementedException();
-			}
-		}
-
-		object IAccessible.accHitTest(int xLeft, int yTop) {
-			throw new NotImplementedException();
-		}
-
-		void IAccessible.accLocation(out int pxLeft, out int pyTop, out int pcxWidth, out int pcyHeight, object childID) {
-			throw new NotImplementedException();
-		}
-
-		object IAccessible.accNavigate(int navDir, object childID) {
-			throw new NotImplementedException();
-		}
-
-		object IAccessible.accParent {
-			get {
-				throw new NotImplementedException();
-			}
-		}
-
-                void IAccessible.accSelect(int flagsSelect, object childID) {
-			throw new NotImplementedException();
-                }
-
-                object IAccessible.accSelection {
-                        get {
-				throw new NotImplementedException();
-			}
-		}
-
-		object IAccessible.get_accChild(object childID) {
-			throw new NotImplementedException();
-		}
-
-		string IAccessible.get_accDefaultAction(object childID) {
-			throw new NotImplementedException();
-		}
-
-		string IAccessible.get_accDescription(object childID) {
-			throw new NotImplementedException();
-		}
-
-		string IAccessible.get_accHelp(object childID) {
-			throw new NotImplementedException();
-		}
-
-		int IAccessible.get_accHelpTopic(out string pszHelpFile,object childID) {
-			throw new NotImplementedException();
-		}
-
-		string IAccessible.get_accKeyboardShortcut(object childID) {
-			throw new NotImplementedException();
-		}
-
-		string IAccessible.get_accName(object childID) {
-			throw new NotImplementedException();
-		}
-
-		object IAccessible.get_accRole(object childID) {
-			throw new NotImplementedException();
-		}
-
-		object IAccessible.get_accState(object childID) {
-			throw new NotImplementedException();
-		}
-
-		string IAccessible.get_accValue(object childID) {
-			throw new NotImplementedException();
-		}
-
-		void IAccessible.set_accName(object childID, string newName) {
-			throw new NotImplementedException();
-		}
-
-		void IAccessible.set_accValue(object childID, string newValue) {
-			throw new NotImplementedException();
-                }
+		// void IAccessible.accDoDefaultAction(object childID) {
+		// 	throw new NotImplementedException();
+		// }
+  //
+		// int IAccessible.accChildCount {
+		// 	get {
+		// 		throw new NotImplementedException();
+		// 	}
+		// }
+  //
+		// object IAccessible.accFocus {
+		// 	get {
+		// 		throw new NotImplementedException();
+		// 	}
+		// }
+  //
+		// object IAccessible.accHitTest(int xLeft, int yTop) {
+		// 	throw new NotImplementedException();
+		// }
+  //
+		// void IAccessible.accLocation(out int pxLeft, out int pyTop, out int pcxWidth, out int pcyHeight, object childID) {
+		// 	throw new NotImplementedException();
+		// }
+  //
+		// object IAccessible.accNavigate(int navDir, object childID) {
+		// 	throw new NotImplementedException();
+		// }
+  //
+		// object IAccessible.accParent {
+		// 	get {
+		// 		throw new NotImplementedException();
+		// 	}
+		// }
+  //
+  //               void IAccessible.accSelect(int flagsSelect, object childID) {
+		// 	throw new NotImplementedException();
+  //               }
+  //
+  //               object IAccessible.accSelection {
+  //                       get {
+		// 		throw new NotImplementedException();
+		// 	}
+		// }
+  //
+		// object IAccessible.get_accChild(object childID) {
+		// 	throw new NotImplementedException();
+		// }
+  //
+		// string IAccessible.get_accDefaultAction(object childID) {
+		// 	throw new NotImplementedException();
+		// }
+  //
+		// string IAccessible.get_accDescription(object childID) {
+		// 	throw new NotImplementedException();
+		// }
+  //
+		// string IAccessible.get_accHelp(object childID) {
+		// 	throw new NotImplementedException();
+		// }
+  //
+		// int IAccessible.get_accHelpTopic(out string pszHelpFile,object childID) {
+		// 	throw new NotImplementedException();
+		// }
+  //
+		// string IAccessible.get_accKeyboardShortcut(object childID) {
+		// 	throw new NotImplementedException();
+		// }
+  //
+		// string IAccessible.get_accName(object childID) {
+		// 	throw new NotImplementedException();
+		// }
+  //
+		// object IAccessible.get_accRole(object childID) {
+		// 	throw new NotImplementedException();
+		// }
+  //
+		// object IAccessible.get_accState(object childID) {
+		// 	throw new NotImplementedException();
+		// }
+  //
+		// string IAccessible.get_accValue(object childID) {
+		// 	throw new NotImplementedException();
+		// }
+  //
+		// void IAccessible.set_accName(object childID, string newName) {
+		// 	throw new NotImplementedException();
+		// }
+  //
+		// void IAccessible.set_accValue(object childID, string newValue) {
+		// 	throw new NotImplementedException();
+  //               }
 		#endregion	// IAccessible Methods and Properties
 	}
 }
