@@ -35,6 +35,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System.Text;
 using System.Runtime.Serialization.Formatters.Soap;
+using System.Text.Json;
 
 namespace System.Resources {
 	internal class SerializedFromResXHandler : ResXDataNodeHandler, IWritableHandler {
@@ -109,15 +110,17 @@ namespace System.Resources {
 						return soapF.Deserialize (s);
 					}
 				} else if (mime_type == ResXResourceWriter.BinSerializedObjectMimeType) {
-					BinaryFormatter binF = new BinaryFormatter ();
-					if (binder == null)
-						binder = new CustomBinder (typeResolver);
-					binF.Binder = binder;
-					byte [] data = Convert.FromBase64String (dataString);
-					using (MemoryStream s = new MemoryStream (data)) {
-						return binF.Deserialize (s);
-					}
-				} else // invalid mime_type
+                    //BinaryFormatter binF = new BinaryFormatter ();
+                    //if (binder == null)
+                    //	binder = new CustomBinder (typeResolver);
+                    //binF.Binder = binder;
+                    //byte [] data = Convert.FromBase64String (dataString);
+                    //using (MemoryStream s = new MemoryStream (data)) {
+                    //	return binF.Deserialize (s);
+                    //}
+                    throw new NotImplementedException ();
+                }
+                else // invalid mime_type
 					return null; 
 			} catch (SerializationException ex) { 
 				if (ex.Message.StartsWith ("Couldn't find assembly"))

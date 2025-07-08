@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Copyright>(c) Various Mono authors, Daniel Van Noord 2019</Copyright>
     <Authors>Various Mono authors, Daniel Van Noord</Authors>
@@ -13,6 +13,7 @@
     <PackageLicenseFile>License.txt</PackageLicenseFile>
     <Version>1.0.0-alpha7</Version>
     <PackageId>Core.System.Drawing.Design</PackageId>
+    <AssemblyName>$(MSBuildProjectName)</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
@@ -40,7 +41,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Drawing.Common" Version="4.7.3" />
+    <PackageReference Include="System.Drawing.Common" />
   </ItemGroup>
 
   <ItemGroup>

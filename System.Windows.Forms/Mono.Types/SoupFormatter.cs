@@ -68,7 +68,7 @@ namespace System.Runtime.Serialization.Formatters.Soap
         MethodCall, MethodResponse, ServerFault, NotRecognize
     }
 
-    public sealed class SoapFormatter : IRemotingFormatter, IFormatter
+    public sealed class SoapFormatter : IRemotingFormatter//, IFormatter
     {
         private SerializationBinder _binder;
         private StreamingContext _context;

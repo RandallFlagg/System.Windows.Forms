@@ -23,7 +23,7 @@ using System.Diagnostics;
 [assembly: CLSCompliant (true)]
 [assembly: NeutralResourcesLanguage ("en-US")]
 
-[assembly: ComVisible (false)]
+// [assembly: ComVisible (false)]
 [assembly: AllowPartiallyTrustedCallers]
 
 [assembly: AssemblyDelaySign (true)]

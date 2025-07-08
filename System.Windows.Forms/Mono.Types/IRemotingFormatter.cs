@@ -39,8 +39,9 @@ namespace System.Runtime.Remoting.Messaging
     [System.Runtime.InteropServices.ComVisible(true)]
     public delegate object HeaderHandler(Header[] headers);
 
+    //TODO: SERIALIZABLE
     [System.Runtime.InteropServices.ComVisible(true)]
-    public interface IRemotingFormatter : IFormatter
+    public interface IRemotingFormatter// : ISerializable// IFormatter
     {
         object Deserialize(Stream serializationStream, HeaderHandler handler);
         void Serialize(Stream serializationStream, object graph, Header[] headers);

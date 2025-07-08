@@ -1,10 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-  </PropertyGroup>
-
-  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <Copyright>(c) Various Mono authors, Daniel Van Noord 2019</Copyright>
     <Description>A .Net Core implementation of the Mono System.Windows.Forms library. This is built on top of System.Drawing.Common.</Description>
@@ -18,66 +15,75 @@
     <PackageLicenseFile>License.txt</PackageLicenseFile>
     <Version>1.0.0-alpha7</Version>
     <PackageId>Core.System.Windows.Forms</PackageId>
+    <AssemblyName>$(MSBuildProjectName)</AssemblyName>
+    <OutputPath>$(SolutionDir)..\bin\$(Configuration)</OutputPath>
+    <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!--<None Include="..\..\..\src\Solution Items\Key.snk" Link="Key.snk" />-->
+    <!--<SignAssembly>False</SignAssembly>
+        <AssemblyOriginatorKeyFile>..\..\..\src\Solution Items\Key.snk</AssemblyOriginatorKeyFile>-->
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="resources\1-up.png" />
-    <None Remove="resources\16_computer.png" />
-    <None Remove="resources\16_dialog-error.png" />
-    <None Remove="resources\16_dialog-information.png" />
-    <None Remove="resources\16_dialog-warning.png" />
-    <None Remove="resources\16_document-open.png" />
-    <None Remove="resources\16_folder-remote.png" />
-    <None Remove="resources\16_folder.png" />
-    <None Remove="resources\16_printer.png" />
-    <None Remove="resources\16_user-desktop.png" />
-    <None Remove="resources\16_user-home.png" />
-    <None Remove="resources\2-up.png" />
-    <None Remove="resources\22_page-magnifier.png" />
-    <None Remove="resources\3-up.png" />
-    <None Remove="resources\32_computer.png" />
-    <None Remove="resources\32_document-open.png" />
-    <None Remove="resources\32_folder-remote.png" />
-    <None Remove="resources\32_printer.png" />
-    <None Remove="resources\32_user-desktop.png" />
-    <None Remove="resources\32_user-home.png" />
-    <None Remove="resources\4-up.png" />
-    <None Remove="resources\6-up.png" />
-    <None Remove="resources\computer.png" />
-    <None Remove="resources\DnDCopy.cur" />
-    <None Remove="resources\DnDLink.cur" />
-    <None Remove="resources\DnDMove.cur" />
-    <None Remove="resources\DnDNo.cur" />
-    <None Remove="resources\document-open.png" />
-    <None Remove="resources\errorProvider.ico" />
-    <None Remove="resources\EventsTab.bmp" />
-    <None Remove="resources\folder-new.png" />
-    <None Remove="resources\folder-remote.png" />
-    <None Remove="resources\folder.png" />
-    <None Remove="resources\go-previous.png" />
-    <None Remove="resources\go-top.png" />
-    <None Remove="resources\image-missing.png" />
-    <None Remove="resources\image-x-generic.png" />
-    <None Remove="resources\keyboards.resources.prebuilt" />
-    <None Remove="resources\mono.ico" />
-    <None Remove="resources\nav_delete.png" />
-    <None Remove="resources\nav_end.png" />
-    <None Remove="resources\nav_first.png" />
-    <None Remove="resources\nav_next.png" />
-    <None Remove="resources\nav_plus.png" />
-    <None Remove="resources\nav_previous.png" />
-    <None Remove="resources\NESW.cur" />
-    <None Remove="resources\NWSE.cur" />
-    <None Remove="resources\preferences-system-windows.png" />
-    <None Remove="resources\PropertiesTab.bmp" />
-    <None Remove="resources\propertygrid-alphabetical.png" />
-    <None Remove="resources\propertygrid-categorized.png" />
-    <None Remove="resources\propertygrid-propertypages.png" />
-    <None Remove="resources\SplitterNS.cur" />
-    <None Remove="resources\SplitterWE.cur" />
-    <None Remove="resources\text-x-generic.png" />
-    <None Remove="resources\user-desktop.png" />
-    <None Remove="resources\user-home.png" />
+    <None Remove="resources\1-up.png"/>
+    <None Remove="resources\16_computer.png"/>
+    <None Remove="resources\16_dialog-error.png"/>
+    <None Remove="resources\16_dialog-information.png"/>
+    <None Remove="resources\16_dialog-warning.png"/>
+    <None Remove="resources\16_document-open.png"/>
+    <None Remove="resources\16_folder-remote.png"/>
+    <None Remove="resources\16_folder.png"/>
+    <None Remove="resources\16_printer.png"/>
+    <None Remove="resources\16_user-desktop.png"/>
+    <None Remove="resources\16_user-home.png"/>
+    <None Remove="resources\2-up.png"/>
+    <None Remove="resources\22_page-magnifier.png"/>
+    <None Remove="resources\3-up.png"/>
+    <None Remove="resources\32_computer.png"/>
+    <None Remove="resources\32_document-open.png"/>
+    <None Remove="resources\32_folder-remote.png"/>
+    <None Remove="resources\32_printer.png"/>
+    <None Remove="resources\32_user-desktop.png"/>
+    <None Remove="resources\32_user-home.png"/>
+    <None Remove="resources\4-up.png"/>
+    <None Remove="resources\6-up.png"/>
+    <None Remove="resources\computer.png"/>
+    <None Remove="resources\DnDCopy.cur"/>
+    <None Remove="resources\DnDLink.cur"/>
+    <None Remove="resources\DnDMove.cur"/>
+    <None Remove="resources\DnDNo.cur"/>
+    <None Remove="resources\document-open.png"/>
+    <None Remove="resources\errorProvider.ico"/>
+    <None Remove="resources\EventsTab.bmp"/>
+    <None Remove="resources\folder-new.png"/>
+    <None Remove="resources\folder-remote.png"/>
+    <None Remove="resources\folder.png"/>
+    <None Remove="resources\go-previous.png"/>
+    <None Remove="resources\go-top.png"/>
+    <None Remove="resources\image-missing.png"/>
+    <None Remove="resources\image-x-generic.png"/>
+    <None Remove="resources\keyboards.resources.prebuilt"/>
+    <None Remove="resources\mono.ico"/>
+    <None Remove="resources\nav_delete.png"/>
+    <None Remove="resources\nav_end.png"/>
+    <None Remove="resources\nav_first.png"/>
+    <None Remove="resources\nav_next.png"/>
+    <None Remove="resources\nav_plus.png"/>
+    <None Remove="resources\nav_previous.png"/>
+    <None Remove="resources\NESW.cur"/>
+    <None Remove="resources\NWSE.cur"/>
+    <None Remove="resources\preferences-system-windows.png"/>
+    <None Remove="resources\PropertiesTab.bmp"/>
+    <None Remove="resources\propertygrid-alphabetical.png"/>
+    <None Remove="resources\propertygrid-categorized.png"/>
+    <None Remove="resources\propertygrid-propertypages.png"/>
+    <None Remove="resources\SplitterNS.cur"/>
+    <None Remove="resources\SplitterWE.cur"/>
+    <None Remove="resources\text-x-generic.png"/>
+    <None Remove="resources\user-desktop.png"/>
+    <None Remove="resources\user-home.png"/>
     <None Include="..\License.txt">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
@@ -85,10 +91,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="..\Mono.Shared\AssemblyRef.cs" Link="AssemblyRef.cs" />
-    <Compile Include="..\Mono.Shared\Consts.cs" Link="Consts.cs" />
-    <Compile Include="..\Mono.Shared\MonoTODOAttribute.cs" Link="MonoTODOAttribute.cs" />
-    <Compile Include="..\Mono.Shared\MonoToolsLocator.cs" Link="MonoToolsLocator.cs" />
+    <Compile Include="..\Mono.Shared\AssemblyRef.cs" Link="AssemblyRef.cs"/>
+    <Compile Include="..\Mono.Shared\Consts.cs" Link="Consts.cs"/>
+    <Compile Include="..\Mono.Shared\MonoTODOAttribute.cs" Link="MonoTODOAttribute.cs"/>
+    <Compile Include="..\Mono.Shared\MonoToolsLocator.cs" Link="MonoToolsLocator.cs"/>
   </ItemGroup>
 
   <ItemGroup>
@@ -269,18 +275,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Accessibility" Version="4.6.0-preview3-27504-2" />
-    <PackageReference Include="Microsoft.Win32.Registry" Version="4.7.0" />
-    <PackageReference Include="Mono.Posix.NETStandard" Version="1.0.0" />
-    <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
-    <PackageReference Include="System.Resources.Extensions" Version="6.0.0" />
-    <PackageReference Include="System.Security.Permissions" Version="6.0.0" />
-    <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
+    <PackageReference Include="Accessibility" />
+    <!--    <PackageReference Include="Microsoft.Win32.Registry" Version="5.0.0" />-->
+    <PackageReference Include="Mono.Posix.NETStandard" />
+    <!--    <PackageReference Include="System.Drawing.Common" Version="9.0.5" />-->
+    <PackageReference Include="System.Resources.Extensions"/>
+    <PackageReference Include="System.Security.Permissions" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Mono.WebBrowser\Mono.WebBrowser.csproj" />
-    <ProjectReference Include="..\System.Drawing.Design\System.Drawing.Design.csproj" />
+    <ProjectReference Include="..\Mono.WebBrowser\Mono.WebBrowser.csproj"/>
+    <ProjectReference Include="..\System.Drawing.Design\System.Drawing.Design.csproj"/>
   </ItemGroup>
 
   <ItemGroup>

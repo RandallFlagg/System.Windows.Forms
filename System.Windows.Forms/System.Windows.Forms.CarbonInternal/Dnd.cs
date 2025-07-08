@@ -184,20 +184,22 @@ namespace System.Windows.Forms.CarbonInternal {
 				// implement me
 				throw new NotSupportedException ("Implement me.");
 			} else if (data is ISerializable) {
-				MemoryStream stream = new MemoryStream ();
-				BinaryFormatter bf = new BinaryFormatter ();
+				//TODO: SERIALIZE
+                throw new NotImplementedException();
+    //            MemoryStream stream = new MemoryStream ();
+				//BinaryFormatter bf = new BinaryFormatter ();
 
-				bf.Serialize (stream, data);
+				//bf.Serialize (stream, data);
 
-				dataptr = Marshal.AllocHGlobal ((int) stream.Length);
-				stream.Seek (0, 0);
+				//dataptr = Marshal.AllocHGlobal ((int) stream.Length);
+				//stream.Seek (0, 0);
 
-				for (int i = 0; i < stream.Length; i++) {
-					Marshal.WriteByte (dataptr, i, (byte) stream.ReadByte ());
-				}
+				//for (int i = 0; i < stream.Length; i++) {
+				//	Marshal.WriteByte (dataptr, i, (byte) stream.ReadByte ());
+				//}
 				
-				type = (IntPtr) typeMonoSerializedObject;
-				size = (int) stream.Length;
+				//type = (IntPtr) typeMonoSerializedObject;
+				//size = (int) stream.Length;
 			} else {
 				dataptr = (IntPtr) GCHandle.Alloc (data);
 
@@ -310,17 +312,18 @@ namespace System.Windows.Forms.CarbonInternal {
 		}
 
 		internal DataObject DeserializeObject (ArrayList flavorlist) {
-			DataObject data = new DataObject ();
-			MemoryStream stream = new MemoryStream (this.DataArray);
-			BinaryFormatter bf = new BinaryFormatter ();
+            throw new NotImplementedException();
+   //         DataObject data = new DataObject ();
+			//MemoryStream stream = new MemoryStream (this.DataArray);
+			//BinaryFormatter bf = new BinaryFormatter ();
 
-			if (stream.Length == 0)
-				return data;
+			//if (stream.Length == 0)
+			//	return data;
 
-			stream.Seek (0, 0);
-			data.SetData (bf.Deserialize (stream));
+			//stream.Seek (0, 0);
+			//data.SetData (bf.Deserialize (stream));
 
-			return data;
+			//return data;
 		}
 
 		internal DataObject ConvertToObject (ArrayList flavorlist) {

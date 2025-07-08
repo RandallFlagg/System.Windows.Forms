@@ -1070,56 +1070,57 @@ namespace System.Windows.Forms
 			internal override void ImportFromX11 (X11SelectionHandler handler, IDataObject data,
 					IntPtr display, IntPtr requestor, IntPtr property)
 			{
+                throw new NotImplementedException();
+    //            MemoryStream stream;
+				//BinaryFormatter formatter;
+				//Object obj;
+				//int pos;
+				//int val;
 
-				MemoryStream stream;
-				BinaryFormatter formatter;
-				Object obj;
-				int pos;
-				int val;
+				//using (stream = GetDataStream (display, requestor, property)) {
+				//	// check the GUID marker - compatibility with Windows
+				//	for (pos = 0; pos < SERIALIZED_OBJECT_MAGIC.Length; pos++) {
+				//		val = stream.ReadByte ( );
+				//		if (val < 0)
+				//			return;
+				//		if ((byte)val != SERIALIZED_OBJECT_MAGIC[pos])
+				//			return;
+				//	}
 
-				using (stream = GetDataStream (display, requestor, property)) {
-					// check the GUID marker - compatibility with Windows
-					for (pos = 0; pos < SERIALIZED_OBJECT_MAGIC.Length; pos++) {
-						val = stream.ReadByte ( );
-						if (val < 0)
-							return;
-						if ((byte)val != SERIALIZED_OBJECT_MAGIC[pos])
-							return;
-					}
+				//	formatter = new BinaryFormatter ();
+				//	obj = formatter.Deserialize (stream);
 
-					formatter = new BinaryFormatter ();
-					obj = formatter.Deserialize (stream);
-
-					data.SetData (obj);
-					data.SetData (DataFormats.Serializable, obj);
-				}
+				//	data.SetData (obj);
+				//	data.SetData (DataFormats.Serializable, obj);
+				//}
 			}
 
 			internal override bool ExportToX11 (X11SelectionHandler handler, object data, IntPtr display,
 					IntPtr requestor, IntPtr property, IntPtr target, IntPtr selection)
 			{
-				IDataObject data_obj;
-				MemoryStream stream;
-				BinaryFormatter formatter;
+                throw new NotImplementedException();
+                //IDataObject data_obj;
+                //MemoryStream stream;
+                //BinaryFormatter formatter;
 
-				if (!IsObjectSerializable (data)) {
-					data_obj = data as IDataObject;
-					data = data_obj.GetData (DataFormats.Serializable, true);
-					if (!IsObjectSerializable (data)) {
-						return false;
-					}
-				}
+                //if (!IsObjectSerializable (data)) {
+                //	data_obj = data as IDataObject;
+                //	data = data_obj.GetData (DataFormats.Serializable, true);
+                //	if (!IsObjectSerializable (data)) {
+                //		return false;
+                //	}
+                //}
 
-				using (stream = new MemoryStream ()) {
-					// write GUID marker - compatibility with Windows
-					stream.Write (SERIALIZED_OBJECT_MAGIC, 0, SERIALIZED_OBJECT_MAGIC.Length);
+                //using (stream = new MemoryStream ()) {
+                //	// write GUID marker - compatibility with Windows
+                //	stream.Write (SERIALIZED_OBJECT_MAGIC, 0, SERIALIZED_OBJECT_MAGIC.Length);
 
-					formatter = new BinaryFormatter ();
-					formatter.Serialize (stream, data);
+                //	formatter = new BinaryFormatter ();
+                //	formatter.Serialize (stream, data);
 
-					return SetStream (stream, display, requestor, property, target, selection);
-				}
-			}
+                //	return SetStream (stream, display, requestor, property, target, selection);
+                //}
+            }
 		}
 
 		sealed class ImageConverter : DataConverter
