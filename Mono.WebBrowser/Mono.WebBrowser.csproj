@@ -2,13 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <Authors>Various Mono authors, Daniel Van Noord</Authors>
-    <Company>None</Company>
     <Description>A .Net Core implementation of the Mono Web Browser library.</Description>
-    <Copyright>(c) Various Mono authors, Daniel Van Noord 2019</Copyright>
     <PackageLicenseExpression></PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/DanielVanNoord/System.Windows.Forms</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/DanielVanNoord/System.Windows.Forms</RepositoryUrl>
     <PackageReleaseNotes>Initial Release</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseFile>License.txt</PackageLicenseFile>

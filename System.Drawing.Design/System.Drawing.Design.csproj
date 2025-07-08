@@ -1,15 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Copyright>(c) Various Mono authors, Daniel Van Noord 2019</Copyright>
-    <Authors>Various Mono authors, Daniel Van Noord</Authors>
     <Description>A .Net Core implementation of the Mono System.Drawing.Design library. This is built on top of System.Drawing.Common.</Description>
-    <PackageProjectUrl>https://github.com/DanielVanNoord/System.Windows.Forms</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/DanielVanNoord/System.Windows.Forms</RepositoryUrl>
     <PackageReleaseNotes>Initial Release</PackageReleaseNotes>
-    <Company>None</Company>
     <PackageLicenseFile>License.txt</PackageLicenseFile>
     <Version>1.0.0-alpha7</Version>
     <PackageId>Core.System.Drawing.Design</PackageId>
@@ -34,10 +28,6 @@
   <ItemGroup>
     <Compile Include="..\Mono.Shared\AssemblyRef.cs" Link="AssemblyRef.cs" />
     <Compile Include="..\Mono.Shared\Consts.cs" Link="Consts.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Assembly\" />
   </ItemGroup>
 
   <ItemGroup>

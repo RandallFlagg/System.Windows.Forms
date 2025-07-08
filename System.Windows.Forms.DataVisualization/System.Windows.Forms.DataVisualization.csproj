@@ -1,18 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-  </PropertyGroup>
-
-  <PropertyGroup>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <Copyright>(c) Various Mono authors, Daniel Van Noord 2019</Copyright>
     <Description>A .Net Core implementation of the Mono System.Windows.Forms.DataVisualization library. This is built on top of System.Drawing.Common.</Description>
-    <Authors>Various Mono authors, Daniel Van Noord</Authors>
-    <PackageProjectUrl>https://github.com/DanielVanNoord/System.Windows.Forms</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/DanielVanNoord/System.Windows.Forms</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Company>None</Company>
     <PackageLicenseExpression></PackageLicenseExpression>
     <PackageReleaseNotes>Initial Release</PackageReleaseNotes>
     <Version>1.0.0-alpha7</Version>

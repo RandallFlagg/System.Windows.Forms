@@ -1,0 +1,76 @@
+<Project>
+  <PropertyGroup Label="project">
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AssemblyOriginatorKeyFile>$(SolutionRoot)/Solution Items/Key.snk</AssemblyOriginatorKeyFile>
+    <AssemblyTitle>FIX ME - AssemblyTitle!</AssemblyTitle>
+    <Authors>Various Mono authors, Daniel Van Noord, RandallFlagg</Authors>
+    <Company>CrOSS Solutions</Company>
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    <Copyright>(c) Various Mono authors, Daniel Van Noord 2019, RandallFlagg 2025</Copyright>
+    <!--<Description></Description>-->
+    <Deterministic>true</Deterministic>
+    <EnableWindowsTargeting>false</EnableWindowsTargeting>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <GenerateResourceUsePreserializedResources>false</GenerateResourceUsePreserializedResources>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ImportWindowsDesktopTargets>false</ImportWindowsDesktopTargets>
+    <IsTestProject>false</IsTestProject>
+    <Nullable>enable</Nullable>
+    <Optimize Condition="'$(Configuration)' == 'Release'">true</Optimize>
+    <OutputPath>$(SolutionDir)\bin\$(Configuration)</OutputPath>
+    <OutputType>Library</OutputType>
+    <!--<Product></Product>-->
+    <PublishAot>false</PublishAot>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <!--<RootNamespace></RootNamespace>-->
+    <SignAssembly>false</SignAssembly>
+    <!--TODO: Enable this-->
+    <SolutionRoot>$(MSBuildThisFileDirectory)</SolutionRoot>
+    <TargetFramework>net8.0</TargetFramework>
+    <UseWindowsForms>false</UseWindowsForms>
+    <WarningLevel>1</WarningLevel>
+    <!--<NoWarn>CS0162;CA1708;CA1805;CA1720;CA1806;CA1051;CA5392;</NoWarn>-->
+    <AnalysisLevel>latest-recommended</AnalysisLevel>
+    <!--<UseAttributeForTargetFrameworkInfoPropertyNames>true</UseAttributeForTargetFrameworkInfoPropertyNames>-->
+    <!-- <RootElementName>Project</RootElementName> -->
+  </PropertyGroup>
+
+  <PropertyGroup Label="version">
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+    <FileVersion>4.0.0.0</FileVersion>
+    <InformationalVersion>5.0.0.0+sha1.abcd1234</InformationalVersion>
+    <Version>2.0.0</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Label="nuget">
+    <IncludeSymbols>true</IncludeSymbols>
+    <!-- <PackageLicenseExpression>FSL-1.1-MIT</PackageLicenseExpression> -->
+    <PackageLicenseFile>License.txt</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/RandallFlagg/System.Windows.Forms</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <!--<PackageTags></PackageTags>-->
+    <PackageVersion>2.0.3</PackageVersion>
+    <RepositoryUrl>https://github.com/RandallFlagg/System.Windows.Forms.git</RepositoryUrl>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <Title>System.Windows.Forms</Title>
+  </PropertyGroup>
+
+  <ItemGroup Label="Links">
+    <Compile Include="$(SolutionRoot)/Solution Items/AssemblyInfo.cs" Link="Properties/SharedAssemblyInfo.cs" />
+    <None Include="$(SolutionRoot)/Solution Items/Key.snk" Link="Key.snk" />
+  </ItemGroup>
+
+  <ItemGroup Label="nuget">
+    <!-- If README is outside of project folders -->
+    <None Include="$(SolutionRoot)/License.txt" Pack="true" PackagePath="$(PackageLicenseFile)" />
+    <None Include="$(SolutionRoot)/README.md" Pack="true" PackagePath="/" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <SourceRoot Include="$(MSBuildThisFileDirectory)" />
+  </ItemGroup>
+
+</Project>
